@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --hot",
     "test": "mocha --require babel-core/register ./test/launcher.js \"test/**/*(.js|.jsx)\"",
     "test:watch": "npm run test -- --watch"
   },
   "dependencies": {
     "immutable": "^3.8.2",
+    "prop-types": "^15.6.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "webpack": "^4.16.4",

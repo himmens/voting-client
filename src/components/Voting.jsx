@@ -1,6 +1,7 @@
 import React from 'react';
+// import PropTypes from 'prop-types';
 
-export default function Voting(props) {
+function Voting(props) {
   const {pair} = props;
 
   return <div className="voting">
@@ -11,3 +12,9 @@ export default function Voting(props) {
     )}
   </div>;
 };
+
+// Voting.propTypes = {
+//   pair: PropTypes.arrayOf(PropTypes.string).isRequired,
+// };
+
+export default Voting;
