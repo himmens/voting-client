@@ -1,9 +1,9 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
-import { BrowserRouter as Router, Switch, Link, Route } from 'react-router-dom';
-import Voting from './components/Voting';
-import Results from './components/Results';
-import {List, Map} from 'immutable';
+import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
+import { VotingContainer } from './components/Voting';
+import { ResultsContainer } from './components/Results';
+import { Map } from 'immutable';
 
 class App extends React.Component {
   constructor(props) {
@@ -29,11 +29,11 @@ class App extends React.Component {
             <li><Link to="/">Home</Link></li>
             <li><Link to="/results">Results</Link></li>
           </ul>
-          <hr/>
+          <hr />
           <Switch>
-            <Route exact path="/" render={() => <Voting pair={pair} vote={this.vote} winner={winner} />} />
-            <Route path="/results" render={() => <Results pair={pair} tally={tally} winner={winner} />} />
-            <Route render={() => <div>No route matches</div>}/>
+            <Route exact path="/" component={VotingContainer} />
+            <Route path="/results" component={ResultsContainer} />
+            <Route render={() => <div>No route matches</div>} />
           </Switch>
         </div>
       </Router>

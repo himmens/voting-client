@@ -4,9 +4,9 @@ import {renderIntoDocument} from 'react-addons-test-utils';
 import Voting from '../../src/components/Voting';
 
 describe('Voting test', () => {
-  it('renders a pair of buttons', () => {
-    const component = renderIntoDocument(
-      <Voting pair={["Trainspotting", "28 Days Later"]}/>
-    );
-  });
+  // it('renders a pair of buttons', () => {
+  //   const component = renderIntoDocument(
+  //     <Voting pair={["Trainspotting", "28 Days Later"]}/>
+  //   );
+  // });
 });
