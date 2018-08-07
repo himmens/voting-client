@@ -1,10 +1,7 @@
-//var webpack = require('webpack');
-
 module.exports = {
   mode: 'development',
+  devtool: 'inline-source-map',
   entry: [
-    // 'webpack-dev-server/client?http://localhost:8080',
-    // 'webpack/hot/only-dev-server',
     './src/index.jsx'
   ],
   module: {
@@ -23,10 +20,6 @@ module.exports = {
     filename: 'bundle.js'
   },
   devServer: {
-    contentBase: './public',
-    // hot: true
-  },
-  plugins: [
-    // new webpack.HotModuleReplacementPlugin()
-  ]
+    contentBase: './public'
+  }
 };
