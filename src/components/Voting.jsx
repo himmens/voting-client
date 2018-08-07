@@ -18,8 +18,8 @@ class Voting extends React.PureComponent {
 }
 
 Voting.propTypes = {
-  pair: PropTypes.arrayOf(PropTypes.string).isRequired,
-  vote: PropTypes.func.isRequired,
+  pair: PropTypes.arrayOf(PropTypes.string),
+  vote: PropTypes.func,
   hasVoted: PropTypes.string,
   winner: PropTypes.string,
 };

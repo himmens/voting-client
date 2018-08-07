@@ -12,7 +12,7 @@ class Winner extends React.PureComponent {
 }
 
 Winner.propTypes = {
-  winner: PropTypes.string.isRequired
+  winner: PropTypes.string
 };
 
 export default Winner;

@@ -7,20 +7,22 @@ class Vote extends React.PureComponent {
     const disabled = !!hasVoted;
 
     return <div className="voting">
-      {pair.map(entry =>
-        <button key={entry}
-                disabled={disabled}
-                onClick={() => vote(entry)}>
-          <h1>{entry}</h1>
-        </button>
-      )}
+      {
+        pair ? pair.map(entry =>
+          <button key={entry}
+                  disabled={disabled}
+                  onClick={() => vote(entry)}>
+            <h1>{entry}</h1>
+          </button>
+        ) : 'No pairs'
+      }
     </div>
   }
 }
 
 Vote.propTypes = {
-  pair: PropTypes.arrayOf(PropTypes.string).isRequired,
-  vote: PropTypes.func.isRequired,
+  pair: PropTypes.arrayOf(PropTypes.string),
+  vote: PropTypes.func,
   hasVoted: PropTypes.string,
 };
 
