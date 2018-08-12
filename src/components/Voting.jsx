@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import Winner from './Winner';
 import Vote from './Vote';
+import * as actions from '../actions';
 
 class Voting extends React.PureComponent {
   render() {
@@ -19,7 +20,7 @@ class Voting extends React.PureComponent {
 }
 
 Voting.propTypes = {
-  pair: PropTypes.arrayOf(PropTypes.string),
+  // pair: PropTypes.arrayOf(PropTypes.string),
   vote: PropTypes.func,
   hasVoted: PropTypes.string,
   winner: PropTypes.string,
@@ -33,4 +34,4 @@ function mapStateToProps(state) {
   };
 }
 
-export const VotingContainer = connect(mapStateToProps)(Voting);
+export const VotingContainer = connect(mapStateToProps, actions)(Voting);
